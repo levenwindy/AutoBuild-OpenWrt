@@ -102,7 +102,7 @@ jobs:
       run: |
         echo '显示当前文件' ;ls -al
         echo "当前路径 $pwd"
-        cp *.img.gz /
+        cp *.tar.gz /
 
     -
       name: Login to DockerHub
