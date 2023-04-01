@@ -12,7 +12,7 @@ on:
   push:
     # branches: [ master ]
     paths:
-      - '.github/Build_OP_x86_64.yml'
+      - '.github/workflows/Build_OP_x86_64.yml'
 
 jobs:
   build:
