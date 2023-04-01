@@ -10,7 +10,9 @@ name: Build_x86_64
 # Add a button to trigger the workflow
 on: 
   push:
-    branches: [ master ]
+    # branches: [ master ]
+    paths:
+      - '.github/Build_OP_x86_64.yml'
 
 jobs:
   build:
