@@ -108,13 +108,13 @@ jobs:
     - name: Build & Push 
       uses: docker/build-push-action@v2
       with:
-        platforms: ${{ env.DOCKER_IMAGE_ARCH }}
+        platforms: linux/amd64
         file: Dockerfile
         context: .
         push: true
         tags: |
-          ${{ secrets.DOCKERHUB_USERNAME }}/openwrt:${{ env.DEVICE_PLATFORM }}
-          registry.cn-shanghai.aliyuncs.com/${{ secrets.ALIYUN_NAMESPACES }}/openwrt:${{ env.DEVICE_PLATFORM }}
+          ${{ secrets.DOCKERHUB_USERNAME }}/openwrt:amd64
+          ${{ secrets.DOCKERHUB_USERNAME }}/openwrt:latest
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
